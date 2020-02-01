@@ -102,27 +102,3 @@ In order to complete this assignment, you must do the following:
 
 ### Grading
 
-This assignment post here
-
-
-
-cacheSolve <- function(x, ...) 
-  {
-  inv <- x$getInverse()
-  if(!is.null(inv)) {
-    message("getting cached data.")
-    return(inv)
-  }
-  data <- x$get()
-  inv <- solve(data)
-  x$setInverse(inv)
-  inv
-}
-
-my_matrix <- makeCacheMatrix(matrix(1:4,2,2))
-my_matrix $get()
-
-cacheSolve(my_matrix)
-cacheSolve(my_matrix)
-
-my_matrix$getInverse()
